@@ -37,7 +37,8 @@ async function pwnMe() {
 		}
 	  } else {
 		alert("Detected a unsupported version/device");
-		socket.emit("error", "Detected a unsupported version/device");
+		socket.emit("log_normal", "Starting exploitation for iOS 14.5");
+		 await kickstart145();
 		return;
 	  }
 	} else {

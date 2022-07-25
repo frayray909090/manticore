@@ -19,7 +19,8 @@ async function pwnMe() {
 		navigator.userAgent.includes("iPad")
 	  ) {
 		if (navigator.userAgent.includes("Macintosh")) {
-		  alert("MacOS is not supported");
+		  socket.emit("log_normal", "Starting exploitation for iOS 14.5");
+		  await kickstart145();
 		  return;
 		}
 		
